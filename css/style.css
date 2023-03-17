@@ -1,0 +1,131 @@
+@charset "utf-8";
+
+*{margin: 0; padding: 0; box-sizing: border-box;}
+ul { list-style: none; }
+a {color: inherit; text-decoration: none; }
+img { border: 0; max-width: 100%;}
+
+.wrap{
+    position: fixed;
+    top: 0; left: 0; 
+    width: 100%; height: 100%;
+    background: url(../img/bg.jpg) right bottom;
+    background-size: cover; 
+}
+
+.wrap h1 {
+    position: fixed;
+    width: 300px; top: 240px; left: 0px;
+    text-align: center; line-height: 0.8;
+}
+.wrap h1 strong{
+    font: bold 16px/1.1 verdana;
+    color: #333;
+}
+.wrap img{ width: 200px;}
+.wrap span{ font: bold 12px/1.6 arial; color: #444; letter-spacing: 5px;}
+
+/* 슬로건 영역 */
+.txt{
+    position: fixed; top: 400px; left: 40px;
+    font: 30px/0.8 Raleway; color: #111;
+}
+
+.txt span{ font-size: 30px; color: #888;}
+
+/* 웹 아이콘 버튼 모음 */
+.sns{ position: fixed; top: 30px; right: 50px;
+    z-index: 10; display: flex;
+}
+.sns li{ margin-left: 30px;}
+.sns li a{color: #555; font-size: 22px;}
+
+
+/* footer */
+footer{
+    position: fixed; width: 100%; height: 40px; left: 0px; bottom: 0px;
+    background: #000; font: 12px/3.3 verdana; color: #fff;
+    letter-spacing: 2px; opacity: 0.4; z-index: 10;
+    display: flex; justify-content: space-between;
+    padding: 0 50px;
+}
+
+footer ul{
+    display: flex;      
+}
+footer ul li { 
+    margin-right: 30px;
+}
+
+
+/* section 구역 */
+.contents { 
+    right: 0; top: 0; height: 100%;
+    display: flex; justify-content: flex-end;  
+}
+
+.contents article{
+    width: 12%; 
+    background: url(../img/divider.png) no-repeat left center;   
+    position: relative;  
+    transition: all 1s;     
+    overflow: hidden;                                                                                                              ;
+}
+
+.contents article:hover{ width: 36%;}
+
+.contents article h2{
+    font: bold 20px Raleway; color: #666;
+    position: absolute; top: 50%; transform: translateY(-50%);
+    left: 20px; width: 100%; border-left: 3px solid #555;
+    padding-left: 15px; z-index: 9; transition: all 1s;
+}
+
+.contents article:hover h2{
+    color: #fff; border-left-color: #fff;
+}
+
+.contents article div{
+    position: absolute; top: 50%; transform: translateY(-50%);
+    height: 0px; width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 8; transition: all 0.3s;
+}
+
+.contents article:hover div{
+    height: 70px; transition: all 0.5s;
+}
+
+.contents article video{
+    position: absolute; height: 100%; 
+    width: auto; top: 0; left: 0; 
+    margin-left: -100px; opacity: 0; 
+    z-index: 6; transition: all 0.5s;
+}
+.contents article:hover video{
+    opacity: 1;
+}
+
+.contents article h3{
+    position: absolute; bottom: 210px; right: -350px;
+    font: 40px Raleway; color: #fff;
+    text-align: right; opacity: 1; z-index: 7; 
+    
+}
+
+.contents article:hover h3{
+    right: 10px;
+    transition: all 0.5s 0.5s;
+}
+
+.contents article p{
+    position: absolute; bottom: 50px; right: -350px;
+    width: 300px; height: 150px; 
+    font: 12px/1.5 airal; color: #fff;
+    text-align: right; opacity: 0.8; z-index: 7;
+}
+
+.contents article:hover p{
+    right: 10px;
+    transition: all 0.5s 0.5s;
+}
